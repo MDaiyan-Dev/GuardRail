@@ -22,6 +22,15 @@ python scripts/pipeline.py --deps safe --simulate missing_sbom
 Invoke-RestMethod http://localhost:8000/health
 ```
 
+## Phase 2 Evidence Generation
+
+From the `guardrail` directory:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run_scenarios.ps1
+python .\scripts\collect_results.py
+```
+
 ## Phase 2 Plan
 
 The next phase will add a lightweight supply chain pipeline that runs:

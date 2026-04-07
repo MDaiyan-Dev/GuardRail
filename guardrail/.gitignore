@@ -1,11 +1,20 @@
 artifacts/**
 !artifacts/.gitkeep
 
+# Explicit local-only pipeline outputs that are not intended for third-party users.
+artifacts/20*/
+artifacts/hotfix_*/
+artifacts/*_check*/
+artifacts/phase2_test_summary.txt
+artifacts/phase2_results_summary.json
+artifacts/phase2_results_summary.md
+
 keys/**
 !keys/.gitkeep
 keys/*.key
 
 docs/generated/**
+docs/phase2_verification_testing.md
 app/requirements.txt
 
 __pycache__/
