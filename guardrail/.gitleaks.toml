@@ -1,0 +1,13 @@
+title = "GuardRail Gitleaks Config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ignore generated GuardRail demo content"
+paths = [
+  '''(^|/)artifacts/''',
+  '''(^|/)keys/''',
+  '''(^|/)docs/''',
+  '''(^|/)\.git/''',
+]
