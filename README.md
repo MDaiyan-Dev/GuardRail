@@ -52,9 +52,9 @@ Key paths:
 - `guardrail/scripts/pipeline.py`
   - Main build, scan, evidence, and deploy/block pipeline
 - `guardrail/scripts/run_scenarios.ps1`
-  - Canonical Phase 2 evidence-generation runner
+  - Phase 2 evidence-generation runner
 - `guardrail/scripts/collect_results.py`
-  - Summary generator for canonical scenario results
+  - Summary generator for scenario results
 - `guardrail/policy/guardrail.rego`
   - Placeholder OPA policy file
 - `guardrail/artifacts/`
@@ -176,7 +176,7 @@ The current policy gate denies deployment when any of the following is true:
 - `sbom_present == false`
 - `signature_verified == false`
 
-As implemented, the canonical scenarios are expected to behave as follows:
+As implemented, the scenarios are expected to behave as follows:
 
 - `phase2_safe_pass`
   - `allow = true`
