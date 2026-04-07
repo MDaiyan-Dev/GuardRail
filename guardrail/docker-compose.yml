@@ -1,0 +1,13 @@
+services:
+  registry:
+    image: registry:2
+    ports:
+      - "5000:5000"
+
+  app:
+    build:
+      context: ./app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - registry
