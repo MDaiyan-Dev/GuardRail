@@ -17,7 +17,7 @@ The implemented system includes:
   - Cosign
 - Per-run evidence artifacts written under `guardrail/artifacts/<run_id>/`
 - A Python policy gate that decides whether deployment is allowed
-- A PowerShell runner and Python results collector for the canonical Phase 2 scenarios
+- A PowerShell runner and Python results collector for the Phase 2 scenarios
 
 The active pipeline flow is:
 
@@ -145,7 +145,7 @@ The most important decision files are:
 - `deploy.json`
   - records whether the app was deployed or blocked
 
-## Canonical Phase 2 Scenarios
+## Phase 2 Scenarios
 
 The official evidence-generation runner executes exactly three scenarios:
 
