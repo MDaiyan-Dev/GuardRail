@@ -16,3 +16,9 @@ make down
 
 - App: `http://localhost:8000`
 - Local registry: `http://localhost:5000`
+
+## Phase 2 Plan
+
+The next phase will add a lightweight supply chain pipeline that runs:
+
+`build -> scan (semgrep/gitleaks/osv) -> sbom (syft) -> sign (cosign) -> provenance -> policy gate (OPA) -> deploy/block`

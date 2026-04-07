@@ -1,3 +1,4 @@
-# Intentionally vulnerable dependency set for a later security finding exercise.
-fastapi==0.115.0
-uvicorn[standard]==0.30.6
+# Intentionally vulnerable for OSV-Scanner demo.
+fastapi
+uvicorn[standard]
+pyyaml==5.1

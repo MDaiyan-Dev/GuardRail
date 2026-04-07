@@ -1,9 +1,11 @@
-artifacts/*
+artifacts/**
 !artifacts/.gitkeep
 
-keys/*
+keys/**
 !keys/.gitkeep
 keys/*.key
+
+docs/generated/**
 
 __pycache__/
 *.py[cod]
