@@ -17,7 +17,7 @@ The implemented system includes:
   - Cosign
 - Per-run evidence artifacts written under `guardrail/artifacts/<run_id>/`
 - A Python policy gate that decides whether deployment is allowed
-- A PowerShell runner and Python results collector for the canonical Phase 2 scenarios
+- A PowerShell runner and Python results collector for the Phase 2 scenarios
 
 The active pipeline flow is:
 
@@ -66,9 +66,9 @@ Key paths:
 - `guardrail/scripts/pipeline.py`
   - Main build, scan, evidence, and deploy/block pipeline
 - `guardrail/scripts/run_scenarios.ps1`
-  - Canonical Phase 2 evidence-generation runner
+  - Phase 2 evidence-generation runner
 - `guardrail/scripts/collect_results.py`
-  - Summary generator for canonical scenario results
+  - Summary generator for scenario results
 - `guardrail/policy/guardrail.rego`
   - Placeholder OPA policy file
 - `guardrail/artifacts/`
@@ -159,7 +159,7 @@ The most important decision files are:
 - `deploy.json`
   - records whether the app was deployed or blocked
 
-## Canonical Phase 2 Scenarios
+## Phase 2 Scenarios
 
 The official evidence-generation runner executes exactly three scenarios:
 
@@ -190,7 +190,7 @@ The current policy gate denies deployment when any of the following is true:
 - `sbom_present == false`
 - `signature_verified == false`
 
-As implemented, the canonical scenarios are expected to behave as follows:
+As implemented, the scenarios are expected to behave as follows:
 
 - `phase2_safe_pass`
   - `allow = true`
