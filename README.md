@@ -6,7 +6,7 @@ GuardRail is a course-scale software supply chain security demonstrator built ar
 
 The implemented system includes:
 
-- A minimal FastAPI demo app with `GET /health` and `GET /hello`
+- A minimal FastAPI demo app with `GET /`, `GET /health`, and `GET /hello`
 - A local Docker registry used as the release target
 - A Python pipeline orchestrator in `guardrail/scripts/pipeline.py`
 - Containerized security tooling for:
@@ -40,6 +40,20 @@ Not required:
 
 - `make` is present in the repo for earlier scaffolding, but the current workflow does not depend on it
 - Local installs of Semgrep, Gitleaks, OSV-Scanner, Syft, or Cosign
+
+## Demo Quickstart
+
+From the repository root:
+
+```powershell
+.\guardrail.ps1 doctor
+.\guardrail.ps1 bootstrap
+.\guardrail.ps1 demo
+```
+
+Open `http://localhost:8000/` in a browser while the `phase2_safe_pass` scenario is deployed during the demo run. The API endpoints remain available at `http://localhost:8000/health` and `http://localhost:8000/hello`.
+
+Evidence artifacts are written under `guardrail/artifacts/<run_id>/`. The consolidated Phase 2 report is generated at `guardrail/artifacts/phase2_results_summary.md`.
 
 ## Repository Layout
 
